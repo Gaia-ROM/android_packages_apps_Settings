@@ -45,9 +45,17 @@ public class DisplaySettings extends PreferenceActivity implements
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_ANIMATIONS = "animations";
     private static final String KEY_ACCELEROMETER = "accelerometer";
+    
+    private static final String KEY_WIDGETS_PICKER = "notif_power_widget_picker";
+    
+    private static final String KEY_NOTIF_POWER_WIDGET = "use_notif_power_widget";
+    private static final String KEY_POWER_WIDGET_HIDE_ON_CHANGE = "notif_power_widget_hide_on_change";
 
     private ListPreference mAnimations;
     private CheckBoxPreference mAccelerometer;
+    private CheckBoxPreference mNotificationPowerWidget;
+    private CheckBoxPreference mPowerWidgetHideOnChange;
+    private PreferenceScreen mNotificationWidgets;
     private float[] mAnimationScales;
 
     private IWindowManager mWindowManager;
@@ -59,6 +67,8 @@ public class DisplaySettings extends PreferenceActivity implements
         mWindowManager = IWindowManager.Stub.asInterface(ServiceManager.getService("window"));
 
         addPreferencesFromResource(R.xml.display_settings);
+        
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         mAnimations = (ListPreference) findPreference(KEY_ANIMATIONS);
         mAnimations.setOnPreferenceChangeListener(this);
@@ -71,6 +81,20 @@ public class DisplaySettings extends PreferenceActivity implements
                 resolver, SCREEN_OFF_TIMEOUT, FALLBACK_SCREEN_TIMEOUT_VALUE)));
         screenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(screenTimeoutPreference);
+        
+        mNotificationPowerWidget = (CheckBoxPreference) prefSet.findPreference(KEY_NOTIF_POWER_WIDGET);
+		mPowerWidgetHideOnChange = (CheckBoxPreference) prefSet.findPreference(KEY_POWER_WIDGET_HIDE_ON_CHANGE);
+		
+		boolean notifPowerWidgetEnabled = Settings.System.getInt(getContentResolver(),
+				Settings.System.EXPANDED_VIEW_WIDGET, 0) == 1;
+		
+		mNotificationPowerWidget.setChecked(notifPowerWidgetEnabled);
+		mPowerWidgetHideOnChange.setEnabled(notifPowerWidgetEnabled);
+        mPowerWidgetHideOnChange.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.EXPANDED_HIDE_ONCHANGE, 0) == 1));
+        
+        mNotificationWidgets = (PreferenceScreen) prefSet.findPreference(KEY_WIDGETS_PICKER);
+        mNotificationWidgets.setEnabled(notifPowerWidgetEnabled);
     }
 
     private void disableUnusableTimeouts(ListPreference screenTimeoutPreference) {
@@ -161,12 +185,31 @@ public class DisplaySettings extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    	boolean value;
         if (preference == mAccelerometer) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.ACCELEROMETER_ROTATION,
                     mAccelerometer.isChecked() ? 1 : 0);
         }
-        return true;
+        
+        if (preference == mNotificationPowerWidget) {
+        	value = mNotificationPowerWidget.isChecked();
+        	Settings.System.putInt(getContentResolver(),
+        			Settings.System.EXPANDED_VIEW_WIDGET,
+        			value ? 1 : 0);
+
+        	mPowerWidgetHideOnChange.setEnabled(value);
+        	mNotificationWidgets.setEnabled(value);
+        }
+        
+        if (preference == mPowerWidgetHideOnChange) {
+        	value = mPowerWidgetHideOnChange.isChecked();
+			Settings.System.putInt(getContentResolver(),
+                    Settings.System.EXPANDED_HIDE_ONCHANGE,
+                    value ? 1 : 0);
+        }
+        
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {

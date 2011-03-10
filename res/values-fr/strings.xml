@@ -335,7 +335,9 @@
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Mémoriser ces paramètres"</string>
     <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
     <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Utiliser la communication en champ proche pour lire et échanger des tags"</string>
-    <string name="nfc_toggle_error" msgid="2233172102497535522">"Une erreur s\'est produite."</string>
+    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
+    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
+    <skip />
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Activer le Wi-Fi"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Paramètres Wi-Fi"</string>
@@ -399,7 +401,7 @@
     <string name="wifi_dns2" msgid="1368601006824882659">"DNS 2"</string>
     <string name="wifi_gateway" msgid="163914742461092086">"Passerelle"</string>
     <string name="wifi_netmask" msgid="4520635321425529085">"Masque de réseau"</string>
-    <string name="wifi_tether_checkbox_text" msgid="6961605862058056788">"Point d\'accès Wi-Fi"</string>
+    <string name="wifi_tether_checkbox_text" msgid="6961605862058056788">"Point d\'accès Wi-Fi mobile"</string>
     <string name="wifi_tether_enabled_subtext" msgid="8948641212931906143">"Point d\'accès Wi-Fi mobile <xliff:g id="NETWORK_SSID">%1$s</xliff:g> actif"</string>
     <string name="wifi_tether_failed_subtext" msgid="2654888578056042315">"Erreur liée au point d\'accès Wi-Fi mobile"</string>
     <string name="wifi_tether_settings_text" msgid="123573487844470195">"Paramètres du point d\'accès Wi-Fi mobile"</string>
@@ -541,7 +543,7 @@
     <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Insérer la carte SD à monter"</string>
     <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Connecter une mémoire de stockage USB"</string>
     <string name="sd_mount" product="default" msgid="5940523765187704135">"Monter la carte SD"</string>
-    <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Installer la mémoire de stockage USB"</string>
+    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Installer la mémoire USB interne"</string>
     <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Monter la carte SD"</string>
     <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Effacer la mémoire USB"</string>
     <string name="sd_format" product="default" msgid="2576054280507119870">"Effacer la carte SD"</string>
@@ -628,10 +630,10 @@
     <string name="call_settings_summary" msgid="7291195704801002886">"Configurer mess. vocale, transferts d\'appel, mises en attente, numéro de l\'appelant"</string>
     <string name="tether_settings_title_usb" msgid="4315031513434087777">"Partage de connexion"</string>
     <string name="tether_settings_title_wifi" msgid="3277144155960302049">"Point d\'accès Wi-Fi mobile"</string>
-    <string name="tether_settings_title_both" msgid="2734066355556891504">"Partage connexion/point accès mobile"</string>
-    <string name="tether_settings_summary_usb" msgid="3562431455625637370">"Partager la connexion Internet de votre mobile via un câble USB"</string>
+    <string name="tether_settings_title_both" msgid="2734066355556891504">"Partage de connexion et point d\'accès mobile"</string>
+    <string name="tether_settings_summary_usb" msgid="3562431455625637370">"Partagez la connexion Internet de votre mobile via un câble USB."</string>
     <string name="tether_settings_summary_wifi" msgid="4690912027002467246">"Transformez votre mobile en point d\'accès Wi-Fi mobile."</string>
-    <string name="tether_settings_summary_both" msgid="7460063951190682635">"Partager la connexion Internet de votre mobile via un câble USB ou transformer votre appareil en point d\'accès Wi-Fi mobile"</string>
+    <string name="tether_settings_summary_both" msgid="7460063951190682635">"Partagez la connexion Internet de votre mobile via un câble USB ou transformez votre appareil en point d\'accès Wi-Fi mobile."</string>
     <string name="usb_title" msgid="7483344855356312510">"USB"</string>
     <string name="usb_tethering_button_text" msgid="585829947108007917">"Via USB"</string>
     <string name="usb_tethering_available_subtext" msgid="156779271296152605">"Connexion USB établie, cochez l\'option adéquate pour partager la connexion."</string>
@@ -709,7 +711,7 @@
     <string name="lock_intro_message" msgid="9100785646737118042"><font size="17">"Protégez votre téléphone contre toute utilisation non autorisée en créant un schéma personnel de déverrouillage de l\'écran. "\n<font height="17">\n</font><b>"1"</b>"  L\'écran suivant vous présente un exemple de schéma. "\n<font height="17">\n</font><b>"2"</b>"  Lorsque vous êtes prêt, dessinez votre propre schéma de déverrouillage. Essayez-en plusieurs, mais veillez à relier au moins quatre points. "\n<font height="17">\n</font><b>"3"</b>"  Reproduisez votre schéma pour confirmer votre choix. "\n<font height="17">\n</font><b>"Pour commencer, appuyez sur \"Suivant\""</b>". "\n<font height="3">\n</font>"Si vous ne souhaitez pas activer la protection, appuyez sur \"Annuler\"."</font></string>
     <string name="lock_example_title" msgid="8052305554017485410">"Exemple de schéma"</string>
     <string name="lock_example_message" msgid="1838650097090632706">"Reliez au moins quatre points."\n" "\n"Sélectionnez \"Suivant\" pour créer votre propre schéma."</string>
-    <string name="manageapplications_settings_title" msgid="5712405848153426706">"Gérer applications"</string>
+    <string name="manageapplications_settings_title" msgid="5712405848153426706">"Gérer les applications"</string>
     <string name="manageapplications_settings_summary" msgid="6097117021500651232">"Gérer et supprimer les applications installées"</string>
     <string name="applications_settings" msgid="3736173521008476946">"Applications"</string>
     <string name="applications_settings_summary" msgid="2714215108369119717">"Gérer les applications, configurer des raccourcis de lancement rapide"</string>
@@ -718,7 +720,7 @@
     <string name="install_unknown_applications" msgid="6612824788917283662">"Autoriser l\'installation d\'applications ne provenant pas d\'Android Market"</string>
     <string name="install_all_warning" msgid="1923717607319933741">"Votre téléphone et vos données personnelles sont très vulnérables face à des applications provenant de sources inconnues. Vous acceptez d\'être le seul responsable de tout dommage causé à votre téléphone ou de toute perte de données pouvant découler de l\'utilisation de telles applications."</string>
     <string name="application_info_label" msgid="1150486628158409543">"Informations sur l\'application"</string>
-    <string name="storage_label" msgid="8700867073480107253">"Stockage"</string>
+    <string name="storage_label" msgid="8700867073480107253">"Mémoire"</string>
     <string name="auto_launch_label" msgid="3012617472833815382">"Lancer par défaut"</string>
     <string name="permissions_label" msgid="2605296874922726203">"Autorisations"</string>
     <string name="cache_header_label" msgid="1877197634162461830">"Cache"</string>
@@ -747,8 +749,8 @@
     <string name="filter_dlg_title" msgid="6507663329723966854">"Options du filtre"</string>
     <string name="filter_apps_all" msgid="5142129378749391876">"Toutes"</string>
     <string name="filter_apps_third_party" msgid="7786348047690140979">"Téléchargées"</string>
-    <string name="filter_apps_running" msgid="7767071454371350486">"En cours"</string>
-    <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"Stockage USB"</string>
+    <string name="filter_apps_running" msgid="7767071454371350486">"En cours d\'exécution"</string>
+    <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"Mémoire de stockage USB"</string>
     <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"Sur la carte SD"</string>
     <string name="disabled" msgid="9206776641295849915">"Désactivée"</string>
     <string name="no_applications" msgid="5190227407135243904">"Aucune application"</string>
@@ -798,8 +800,8 @@
     <string name="service_started_by_app" msgid="6575184738671598131">"Service démarré par l\'application"</string>
     <!-- no translation found for service_client_name (4037193625611815517) -->
     <skip />
-    <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g> libre"</string>
-    <string name="service_foreground_processes" msgid="7583975676795574276">"<xliff:g id="MEMORY">%1$s</xliff:g> utilisés"</string>
+    <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g> libre(s)"</string>
+    <string name="service_foreground_processes" msgid="7583975676795574276">"<xliff:g id="MEMORY">%1$s</xliff:g> utilisé(s)"</string>
     <string name="memory" msgid="6609961111091483458">"RAM"</string>
     <!-- no translation found for service_process_name (4098932168654826656) -->
     <skip />
@@ -980,11 +982,11 @@
     <string name="recognizer_settings_summary" msgid="4472287934134546902">"Paramètres de \"<xliff:g id="RECOGNIZER_NAME">%s</xliff:g>\""</string>
     <string name="tts_settings" msgid="8186971894801348327">"Paramètres de la synthèse vocale"</string>
     <string name="tts_settings_title" msgid="4182348653053000933">"Synthèse vocale"</string>
-    <string name="use_default_tts_settings_title" msgid="1577063839539732930">"Utiliser mes paramètres"</string>
-    <string name="use_default_tts_settings_summary" msgid="4253502106159206276">"Remplacer les paramètres de l\'application par les paramètres ci-dessous"</string>
+    <string name="use_default_tts_settings_title" msgid="1577063839539732930">"Tjrs utiliser mes param."</string>
+    <string name="use_default_tts_settings_summary" msgid="4253502106159206276">"Les param. par défaut ci-dessous remplacent les param. de l\'application"</string>
     <string name="tts_default_settings_section" msgid="5787915620218907443">"Paramètres par défaut"</string>
     <string name="tts_default_synth_title" msgid="29467896463371992">"Moteur par défaut"</string>
-    <string name="tts_default_synth_summary" msgid="6482936537135251690">"Définir le moteur de synthèse vocale à utiliser"</string>
+    <string name="tts_default_synth_summary" msgid="6482936537135251690">"Définit le moteur de synthèse vocale à utiliser."</string>
     <string name="tts_default_rate_title" msgid="6030550998379310088">"Cadence"</string>
     <string name="tts_default_rate_summary" msgid="4061815292287182801">"Vitesse à laquelle le texte est énoncé"</string>
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Ton"</string>
@@ -1143,7 +1145,7 @@
     <string name="auto_restore_title" msgid="5397528966329126506">"Restaurer automatiquement"</string>
     <string name="auto_restore_summary" msgid="83177150536734378">"Restaurer les paramètres ou autres données sauvegardées lorsqu\'une application est réinstallée"</string>
     <string name="backup_erase_dialog_title" msgid="3438255037256586237">"Sauvegarder"</string>
-    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Voulez-vous vraiment arrêter de sauvegarder vos mots de passe Wi-Fi, vos favoris ainsi que vos données et paramètres d\'application, et supprimer les copies correspondantes des serveurs Google ?"</string>
+    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Voulez-vous vraiment arrêter de sauvegarder vos mots de passe Wi-Fi, vos favoris ainsi que vos données et paramètres d\'application, et supprimer toutes les copies des serveurs Google ?"</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"Paramètres d\'administration du périphérique"</string>
     <string name="active_device_admin_msg" msgid="6930903262612422111">"Administrateur du périphérique"</string>
     <string name="remove_device_admin" msgid="3596845261596451437">"Désactiver"</string>
@@ -1159,4 +1161,165 @@
     <string name="sound_category_calls_title" msgid="3688531959256239012">"Appels entrants"</string>
     <string name="sound_category_notification_title" msgid="3502115998790286943">"Notifications"</string>
     <string name="sound_category_feedback_title" msgid="4399742321363475393">"Commentaires"</string>
+   
+    <string name="possibleButtons">Interrupteurs disponibles</string>
+    <string name="toggleWifi">Wi-Fi</string>
+    <string name="toggleWifiAp">Hotspot Wi-Fi mobile</string>
+    <string name="toggleBluetooth">Bluetooth</string>
+    <string name="toggleGPS">GPS</string>
+    <string name="toggleData">Données cellulaires</string>
+    <string name="toggleSync">Synchronisation</string>
+    <string name="toggle2g3g">2G/3G</string>
+    <string name="toggleSound">Mode de sonnerie</string>
+    <string name="toggleBrightness">Luminosité</string>
+    <string name="toggleAutoRotate">Orientation</string>
+    <string name="toggleScreenTimeout">Timeout de l\'écran</string>
+    <string name="toggleAirplane">Mode avion</string>
+    <string name="toggleFlashlight">Lampe torche</string>
+    <string name="toggleLockScreen">Écran de verrouillage</string>
+
+    <string name="toggleWifiDescription">Activer/désactiver le Wi-Fi</string>
+    <string name="toggleWifiApDescription">Activer/désactiver le hotspot Wi-Fi portable</string>
+    <string name="toggleBluetoothDescription">Activer/désactiver Bluetooth</string>
+    <string name="toggleGPSDescription">Activer/désactiver le GPS</string>
+    <string name="toggleDataDescription">Activer/désactiver les données par le réseau mobile</string>
+    <string name="toggleSyncDescription">Activer/désactiver la synchronisation automatique</string>
+    <string name="toggle2g3gDescription">Basculer entre 2G et 3G</string>
+    <string name="toggleSoundDescription">Basculer mode sonnerie/vibreur</string>
+    <string name="toggleBrightnessDescription">Basculer les différents modes de luminosité</string>
+    <string name="toggleAutoRotateDescription">Activer/désactiver le capteur d\'orientation</string>
+    <string name="toggleScreenTimeoutDescription">15sec, 1min, 5 minutes</string>
+    <string name="toggleAirplaneDescription">Activer/désactiver le mode avion</string>
+    <string name="toggleFlashlightDescription">Activer/désactiver la lampe torche</string>
+    <string name="toggleLockScreenDescription">Activer/désactiver l\'écran de verrouillage</string>
+
+    <string name="widgetSettings">Paramètres du widget</string>
+    <string name="wifiSettings">Paramètres des événements Wi-Fi</string>
+    <string name="dataSettings">Paramètres des événements data</string>
+    <string name="powerSettings">Paramètres des événements de l\'alimentation</string>
+
+    <string name="generalSettings">Paramètres généraux</string>
+
+    <string name="autoDisable3G">Désactiver les data désactive la 3G</string>
+    <string name="autoEnable3G">Activer les data active la 3G</string>
+    <string name="autoDisable3GWithWifi">Activer le Wi-Fi désactive la 3G</string>
+    <string name="autoEnable3GWithWifi">Désactiver le Wi-Fi active la 3G</string>
+    <string name="useRoundCorners">Angles arrondis</string>
+    <string name="useVertical">Disposition verticale</string>
+    <string name="useTransparent">Widget transparent</string>
+    <string name="autoEnableSyncWithWifi">Activer la synchro avec le Wi-Fi</string>
+    <string name="autoDisableSyncWithWifi">Désactiver la synchro avec le Wi-Fi</string>
+    <string name="ringModeVibrateAsOn">Activé en mode vibreur</string>
+    <string name="monitorDataRoaming">Roaming data en rouge</string>
+    <string name="autoEnableBluetoothWithPower">Secteur active Bluetooth</string>
+    <string name="autoDisableBluetoothWithPower">Batterie désactive Bluetooth</string>
+    <string name="autoEnableWifiWithPower">Secteur active le Wi-Fi</string>
+    <string name="autoDisableWifiWithPower">Batterie désactive le Wi-Fi</string>
+
+    <string name="autoDisable3GDescription">2G quand les données mobiles sont désactivées</string>
+    <string name="autoEnable3GDescription">3G quand les données mobiles sont activées</string>
+    <string name="autoDisable3GWithWifiDescription">2G quand le Wi-Fi est activé</string>
+    <string name="autoEnable3GWithWifiDescription">3G quand le Wi-Fi est désactivé</string>
+    <string name="useRoundCornersDescription">Arrondir les coins du widget</string>
+    <string name="useTransparentDescription">Pas d\'arrière-plan</string>
+    <string name="useVerticalDescription">Afficher le widget verticalement</string>
+    <string name="autoEnableSyncWithWifiDescription">Activer la synchro avec le Wi-Fi</string>
+    <string name="autoDisableSyncWithWifiDescription">Désactiver la synchro avec le Wi-Fi</string>
+    <string name="ringModeVibrateAsOnDescription">Montrer le son comme étant activé en mode vibreur</string>
+    <string name="monitorDataRoamingDescription">Colorer le statut des données en rouge lorsque le roaming est activé</string>
+    <string name="autoEnableBluetoothWithPowerDescription">Le passage sur secteur active Bluetooth</string>
+    <string name="autoDisableBluetoothWithPowerDescription">Le passage sur batterie désactive Bluetooth</string>
+    <string name="autoEnableWifiWithPowerDescription">Le passage sur secteur active le Wi-Fi</string>
+    <string name="autoDisableWifiWithPowerDescription">Le passage sur batterie désactive le Wi-Fi</string>
+
+    <string name="notConfigured">Je ne suis pas configuré. Veuillez m\'ajouter à nouveau !</string>
+
+    <string name="ok">OK</string>
+
+    <!-- Widget Picker -->
+    <string name="widget_count">(%d widgets)</string>
+    
+    <!-- Expanded View Power Widget -->
+    <string name="title_widget_picker">"Paramètres widget barre notif."</string>
+    <string name="summary_widget_picker">"Choisissez les widgets"</string>
+    <string name="use_notif_power_widget_title">"Utiliser widget barre notif."</string>
+    <string name="title_expanded_hide_onchange">"Cacher lors d'un chgmt."</string>
+    <string name="title_expanded_widget">"Widget de la barre de notifications"</string>
+    <string name="title_widget_buttons">"Boutons du widget"</string>
+    <string name="summary_expanded_hide_onchange">"Cacher la barre après un changement."</string>
+    <string name="title_use_colored_ind">"Indicateur coloré"</string>
+    <string name="title_toggle_wifi">"Activer le Wifi"</string>
+    <string name="title_toggle_bluetooth">"Activer le Bluetooth"</string>
+    <string name="title_toggle_gps">"Activer le GPS"</string>
+    <string name="title_toggle_sound">"Activer le son"</string>
+    <string name="title_toggle_brightness">"Réglage luminosité"</string>
+    <string name="title_toggle_sync">"Activer la synchronisation"</string>
+    <string name="title_toggle_wifiap">"Activer le point d'accès wifi"</string>
+    <string name="title_toggle_screentimeout">"Temps de mise en veille"</string>
+    <string name="title_toggle_mobiledata">"Activer les données"</string>
+    <string name="title_toggle_lockscreen">"Vérrouiller"</string>
+    <string name="title_toggle_networkmode">"Activer 2G/3G"</string>
+    <string name="title_toggle_autorotate">"Activer l'orientation"</string>
+    <string name="title_toggle_airplane">"Activer le mode avion"</string>
+    <string name="title_toggle_flashlight">"Activer la lampe de poche"</string>
+    <string name="title_toggle_sleep">"Mise en veille"</string>
+    <string name="widget_max_buttons">"Le nombre de boutons maximal est de 6"</string>
+    
+    <!-- Trackpad and Menu key settings -->
+    <string name="trackpad_cat">"Réveil/Déverrouillage"</string>
+    <string name="menu_unlock_title">"Déverrouillage avec Menu"</string>
+    <string name="trackpad_wake_title">"Réveil avec le trackpad"</string>
+    <string name="trackpad_unlock_title">"Déverrouillage avec le trackpad"</string>
+    <string name="menu_unlock_summary">"La touche Menu déverrouille le téléphone."</string>
+    <string name="trackpad_wake_summary">"Le trackpad réveille le téléphone."</string>
+    <string name="trackpad_unlock_summary">"Le trackpad déverrouille le téléphone."</string>
+    
+    <!-- About phone screen,  setting option name-->
+    <string name="mod_version">"Version du mod"</string>
+    <string name="mod_version_default">"Inconnu"</string>
+
+
+    <!-- Backlight -->
+    <string name="lights_settings_title">"Paramètres des lumières"</string>
+    <string name="backlight_title">"Rétroéclairage automatique"</string>
+    <string name="backlight_summary">"Tweaks et niveaux de filtrage"</string>
+    <string name="light_filter_title">"Filtrage du capteur de lumière"</string>
+    <string name="light_filter_enabled_title">"Activé"</string>
+    <string name="light_filter_enabled_summary">"Appliquer le filtre moyen afin de réduire le scintillement"</string>
+    <string name="light_filter_window_title">"Longueur de la fenêtre"</string>
+    <string name="light_filter_window_summary">"La valeur filtrée est la valeur moyenne du capteur de lumière durant une certaine période"</string>
+    <string name="light_filter_reset_title">"Seuil de remise à zéro"</string>
+    <string name="light_filter_reset_summary">"Les échantillons qui dépassent le seuil annulent le filtre"</string>
+    <string name="light_filter_interval_title">"Intervalle d\'échantillonage"</string>
+    <string name="light_filter_interval_summary">"Une valeur plus basse améliore l\'efficacité mais utilise plus le CPU"</string>
+    <string name="light_levels_title">"Niveaux de lumière"</string>
+    <string name="light_levels_enabled_title">"Utiliser valeur personnalisée"</string>
+    <string name="light_levels_dim_title">"Niveau d\'obscurcissement"</string>
+    <string name="light_levels_dim_summary">"Niveau de luminosité utilisé pour l\'obscurcissement"</string>
+    <string name="light_levels_editor_title">"Éditer les autres niveaux..."</string>
+    <string name="light_decrease_enabled_title">"Autoriser diminution luminosité"</string>
+    <string name="light_decrease_enabled_summary">"Activer afin d\'autoriser la diminution des éclairages. Utiliser l\'hystérésis pour réduire le scintillement."</string>
+    <string name="light_decrease_hysteresis_title">"Diminuer l\'hystérésis"</string>
+    <string name="light_decrease_hysteresis_summary">"Les niveaux de mesures se chevaucheront de tant vers le bas."</string>
+
+    <!-- Light sensor levels -->
+    <string name="ll_title">"Niveaux du capteur d\'éclairage"</string>
+    <string name="ll_header_upper">"Plus haut"</string>
+    <string name="ll_header_lower">"Plus bas"</string>
+    <string name="ll_header_lcd">"Écran"</string>
+    <string name="ll_header_btn">"Boutons"</string>
+    <string name="ll_header_kb">"Clavier"</string>
+    <string name="ll_lux">"Capteur (filtré / brut):"</string>
+    <string name="ll_lcd">"Écran :"</string>
+    <string name="ll_btn">"Boutons :"</string>
+    <string name="ll_kb">"Clavier :"</string>
+    <string name="ll_disabled">"désactivé"</string>
+    <string name="ll_default">"Charger défauts"</string>
+    <string name="ll_save">"Enregistrer &amp; appliquer"</string>
+    <string name="ll_reload">"Recharger actifs"</string>
+    <string name="ll_bad_levels">"Les niveaux doivent croître"</string>
+    <string name="ll_num_levels">"Définir le nombre de niveaux"</string>
+    
+    <string name="move_all_apps_to_sd_title">"Déplacer vers la carte SD"</string>
+    <string name="move_all_apps_to_sd_summary">"Autoriser le déplacement de toutes les applications vers la carte mémoire."</string>
 </resources>

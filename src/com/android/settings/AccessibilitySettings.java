@@ -62,9 +62,15 @@ public class AccessibilitySettings extends PreferenceActivity {
 
     private final String POWER_BUTTON_ENDS_CALL_CHECKBOX =
         "power_button_ends_call";
+    
+    private static final String KEY_MENU_UNLOCK = "menu_unlock";
+	private static final String KEY_TRACKBALL_UNLOCK = "trackpad_unlock";
+	private static final String KEY_TRACKBALL_WAKE = "trackpad_wake";
 
     private CheckBoxPreference mToggleCheckBox;
-
+    private CheckBoxPreference mMenuUnlock;
+    private CheckBoxPreference mTrackballUnlock;
+    private CheckBoxPreference mTrackballWake;
     private PreferenceCategory mPowerButtonCategory;
     private CheckBoxPreference mPowerButtonEndsCallCheckBox;
 
@@ -87,6 +93,10 @@ public class AccessibilitySettings extends PreferenceActivity {
         mPowerButtonCategory = (PreferenceCategory) findPreference(POWER_BUTTON_CATEGORY);
         mPowerButtonEndsCallCheckBox = (CheckBoxPreference) findPreference(
             POWER_BUTTON_ENDS_CALL_CHECKBOX);
+        
+		mMenuUnlock = (CheckBoxPreference) findPreference(KEY_MENU_UNLOCK);
+		mTrackballUnlock = (CheckBoxPreference) findPreference(KEY_TRACKBALL_UNLOCK);
+		mTrackballWake = (CheckBoxPreference) findPreference(KEY_TRACKBALL_WAKE);
 
         addAccessibilitServicePreferences();
     }
@@ -134,7 +144,7 @@ public class AccessibilitySettings extends PreferenceActivity {
             mToggleCheckBox.setEnabled(false);
             // Notify user that they do not have any accessibility apps
             // installed and direct them to Market to get TalkBack
-            displayNoAppsAlert();
+            //displayNoAppsAlert();
         }
 
         if (KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER)) {
@@ -152,6 +162,16 @@ public class AccessibilitySettings extends PreferenceActivity {
             // No POWER key on the current device; this entire category is irrelevant.
             getPreferenceScreen().removePreference(mPowerButtonCategory);
         }
+        
+        mMenuUnlock.setChecked(Settings.System.getInt(
+        	getContentResolver(),
+        	Settings.System.MENU_UNLOCK, 0) != 0);
+        mTrackballUnlock.setChecked(Settings.System.getInt(
+        	getContentResolver(),
+        	Settings.System.TRACKBALL_UNLOCK, 0) != 0);
+        mTrackballWake.setChecked(Settings.System.getInt(
+        	getContentResolver(),
+        	Settings.System.TRACKBALL_WAKE, 0) != 0);
     }
 
     @Override
@@ -195,6 +215,21 @@ public class AccessibilitySettings extends PreferenceActivity {
                     Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR,
                     (isChecked ? Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_HANGUP
                             : Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_SCREEN_OFF));
+        } else if (preference == mMenuUnlock) {
+        	Settings.System.putInt(
+        		getContentResolver(),
+        		Settings.System.MENU_UNLOCK,
+        		mMenuUnlock.isChecked() ? 1 : 0);
+        } else if (preference == mTrackballUnlock) {
+        	Settings.System.putInt(
+        		getContentResolver(),
+        		Settings.System.TRACKBALL_UNLOCK,
+        		mTrackballUnlock.isChecked() ? 1 : 0);
+        } else if (preference == mTrackballWake) {
+        	Settings.System.putInt(
+        		getContentResolver(),
+        		Settings.System.TRACKBALL_WAKE,
+        		mTrackballWake.isChecked() ? 1 : 0);
         } else if (preference instanceof CheckBoxPreference) {
             handleEnableAccessibilityServiceStateChange((CheckBoxPreference) preference);
         }
@@ -323,44 +358,5 @@ public class AccessibilitySettings extends PreferenceActivity {
             preference.setTitle(serviceInfo.loadLabel(getPackageManager()));
             mAccessibilityServicesCategory.addPreference(preference);
         }
-    }
-
-    /**
-     * Displays a message telling the user that they do not have any accessibility
-     * related apps installed and that they can get TalkBack (Google's free screen
-     * reader) from Market.
-     */
-    private void displayNoAppsAlert() {
-        try {
-            PackageManager pm = getPackageManager();
-            ApplicationInfo info = pm.getApplicationInfo("com.android.vending", 0);
-        } catch (NameNotFoundException e) {
-            // This is a no-op if the user does not have Android Market
-            return;
-        }
-        AlertDialog.Builder noAppsAlert = new AlertDialog.Builder(this);
-        noAppsAlert.setTitle(R.string.accessibility_service_no_apps_title);
-        noAppsAlert.setMessage(R.string.accessibility_service_no_apps_message);
-
-        noAppsAlert.setPositiveButton(android.R.string.ok,
-            new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    String screenreaderMarketLink =
-                        SystemProperties.get("ro.screenreader.market",
-                                DEFAULT_SCREENREADER_MARKET_LINK);
-                    Uri marketUri = Uri.parse(screenreaderMarketLink);
-                    Intent marketIntent = new Intent(Intent.ACTION_VIEW, marketUri);
-                    startActivity(marketIntent);
-                    finish();
-                }
-            });
-
-        noAppsAlert.setNegativeButton(android.R.string.cancel,
-            new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            });
-
-        noAppsAlert.show();
     }
 }

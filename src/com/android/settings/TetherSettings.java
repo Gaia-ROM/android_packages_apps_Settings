@@ -86,7 +86,7 @@ public class TetherSettings extends PreferenceActivity {
                 (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 
         mUsbRegexs = cm.getTetherableUsbRegexs();
-        if (mUsbRegexs.length == 0 || Utils.isMonkeyRunning()) {
+        if (mUsbRegexs.length == 0) {
             getPreferenceScreen().removePreference(mUsbTether);
 
             setTitle(R.string.tether_settings_title_wifi);

@@ -34,6 +34,8 @@ public class ApplicationSettings extends PreferenceActivity implements
     private static final String KEY_TOGGLE_INSTALL_APPLICATIONS = "toggle_install_applications";
     private static final String KEY_APP_INSTALL_LOCATION = "app_install_location";
     private static final String KEY_QUICK_LAUNCH = "quick_launch";
+    
+    private static final String KEY_TOOGLE_MOVE_ALL_APPS_TO_SD = "toggle_move_all_apps_to_sdcard";
 
     // App installation location. Default is ask the user.
     private static final int APP_INSTALL_AUTO = 0;
@@ -45,6 +47,8 @@ public class ApplicationSettings extends PreferenceActivity implements
     private static final String APP_INSTALL_AUTO_ID = "auto";
     
     private CheckBoxPreference mToggleAppInstallation;
+    
+    private CheckBoxPreference mToggleMoveAllAppsToSD;
 
     private ListPreference mInstallLocation;
 
@@ -55,17 +59,19 @@ public class ApplicationSettings extends PreferenceActivity implements
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.application_settings);
+        
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         mToggleAppInstallation = (CheckBoxPreference) findPreference(KEY_TOGGLE_INSTALL_APPLICATIONS);
         mToggleAppInstallation.setChecked(isNonMarketAppsAllowed());
 
         mInstallLocation = (ListPreference) findPreference(KEY_APP_INSTALL_LOCATION);
         // Is app default install location set?
-        boolean userSetInstLocation = (Settings.System.getInt(getContentResolver(),
+        /*boolean userSetInstLocation = (Settings.System.getInt(getContentResolver(),
                 Settings.Secure.SET_INSTALL_LOCATION, 0) != 0);
         if (!userSetInstLocation) {
             getPreferenceScreen().removePreference(mInstallLocation);
-        } else {
+        } else {*/
             mInstallLocation.setValue(getAppInstallLocation());
             mInstallLocation.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -74,13 +80,17 @@ public class ApplicationSettings extends PreferenceActivity implements
                     return false;
                 }
             });
-        }
+        //}
 
         if (getResources().getConfiguration().keyboard == Configuration.KEYBOARD_NOKEYS) {
             // No hard keyboard, remove the setting for quick launch
             Preference quickLaunchSetting = findPreference(KEY_QUICK_LAUNCH);
             getPreferenceScreen().removePreference(quickLaunchSetting);
         }
+        
+        mToggleMoveAllAppsToSD = (CheckBoxPreference) prefSet.findPreference(KEY_TOOGLE_MOVE_ALL_APPS_TO_SD);
+        mToggleMoveAllAppsToSD.setChecked(Settings.System.getInt(getContentResolver(),
+        			Settings.System.MOVE_ALL_APPS_TO_SD, 1) == 1);
     }
 
     protected void handleUpdateAppInstallLocation(final String value) {
@@ -118,6 +128,12 @@ public class ApplicationSettings extends PreferenceActivity implements
             } else {
                 setNonMarketAppsAllowed(false);
             }
+        }
+        
+        if (preference == mToggleMoveAllAppsToSD) {
+        	Settings.System.putInt(getContentResolver(),
+        			Settings.System.MOVE_ALL_APPS_TO_SD,
+        			mToggleMoveAllAppsToSD.isChecked() ? 1 : 0);
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);

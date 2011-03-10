@@ -25,6 +25,11 @@
             android:summaryOff="@string/install_unknown_applications"
             android:summaryOn="@string/install_unknown_applications"
             android:persistent="false" />
+    
+    <CheckBoxPreference
+    		android:key="toggle_move_all_apps_to_sdcard"
+    		android:title="@string/move_all_apps_to_sd_title"
+    		android:summary="@string/move_all_apps_to_sd_summary" />
 
     <ListPreference
         android:key="app_install_location"

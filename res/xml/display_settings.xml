@@ -41,4 +41,32 @@
                 android:persistent="false"
                 android:entries="@array/screen_timeout_entries"
                 android:entryValues="@array/screen_timeout_values" />
+                
+		<PreferenceCategory android:title="@string/title_expanded_widget">
+			<CheckBoxPreference
+				android:key="use_notif_power_widget"
+				android:title="@string/use_notif_power_widget_title"/>
+			<CheckBoxPreference
+				android:key="notif_power_widget_hide_on_change"
+				android:title="@string/title_expanded_hide_onchange"/>
+
+			<PreferenceScreen
+					android:key="notif_power_widget_picker"
+				    android:title="@string/title_widget_picker"
+				    android:summary="@string/summary_widget_picker">
+				<intent android:action="android.intent.action.MAIN"
+				        android:targetPackage="com.android.settings"
+				        android:targetClass="com.android.settings.NotificationPowerWidgetSettings" />
+			</PreferenceScreen>
+		</PreferenceCategory>
+
+		<PreferenceCategory android:title="@string/lights_settings_title">
+		    <PreferenceScreen android:key="backlight_settings"
+		        android:title="@string/backlight_title" android:summary="@string/backlight_summary">
+		        <intent android:action="android.intent.action.MAIN"
+		            android:targetPackage="com.android.settings"
+		            android:targetClass="com.android.settings.BacklightActivity" />
+		    </PreferenceScreen>
+		</PreferenceCategory>
+
 </PreferenceScreen>

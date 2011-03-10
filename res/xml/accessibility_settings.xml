@@ -33,5 +33,21 @@
                 android:summary="@string/accessibility_power_button_ends_call_summary"
                 android:persistent="false" />
     </PreferenceCategory>
+    
+    <PreferenceCategory android:key="accessibility_trackpad"
+    		android:title="@string/trackpad_cat">
+    	<CheckBoxPreference
+    			android:key="menu_unlock"
+    			android:title="@string/menu_unlock_title"
+    			android:summary="@string/menu_unlock_summary"/>
+    	<CheckBoxPreference
+    			android:key="trackpad_unlock"
+    			android:title="@string/trackpad_unlock_title"
+    			android:summary="@string/trackpad_unlock_summary"/>
+    	<CheckBoxPreference
+    			android:key="trackpad_wake"
+    			android:title="@string/trackpad_wake_title"
+    			android:summary="@string/trackpad_wake_summary"/>
+    </PreferenceCategory>
 
 </PreferenceScreen>

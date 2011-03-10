@@ -123,7 +123,7 @@ public class WirelessSettings extends PreferenceActivity {
         }
 
         // Remove NFC if its not available
-        if (NfcAdapter.getDefaultAdapter(this) == null) {
+        if (NfcAdapter.getDefaultAdapter() == null) {
             getPreferenceScreen().removePreference(nfc);
         }
 

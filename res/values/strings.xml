@@ -1229,6 +1229,9 @@
     <string name="kernel_version">Kernel version</string>
     <!-- About phone screen,  setting option name-->
     <string name="build_number">Build number</string>
+    <!-- About phone screen,  setting option name-->
+    <string name="mod_version">Mod version</string>
+    <string name="mod_version_default">Unknown</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
     <string name="device_info_not_available">Not available</string>
@@ -2647,4 +2650,172 @@ found in the list of installed applications.</string>
     <string name="sound_category_calls_title">Incoming calls</string>
     <string name="sound_category_notification_title">Notifications</string>
     <string name="sound_category_feedback_title">Feedback</string>
+    
+    <string name="possibleButtons">Possible Buttons</string>
+    <string name="toggleWifi">Wi-Fi</string>
+    <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
+    <string name="toggleBluetooth">Bluetooth</string>
+    <string name="toggleGPS">GPS</string>
+    <string name="toggleData">Mobile Data</string>
+    <string name="toggleSync">Data Sync</string>
+    <string name="toggle2g3g">2G/3G</string>
+    <string name="toggleSound">Ring Mode</string>
+    <string name="toggleBrightness">Brightness</string>
+    <string name="toggleAutoRotate">Orientation</string>
+    <string name="toggleScreenTimeout">Screen Timeout</string>
+    <string name="toggleAirplane">Airplane</string>
+    <string name="toggleLockScreen">Lock Screen</string>
+
+    <string name="toggleWifiDescription">Enable/disable Wifi</string>
+    <string name="toggleWifiApDescription">Enable/disable the portable Wi-Fi hotspot</string>
+    <string name="toggleBluetoothDescription">Enable/disable Bluetooth</string>
+    <string name="toggleGPSDescription">Enable/disable GPS</string>
+    <string name="toggleDataDescription">Enable/disable mobile data</string>
+    <string name="toggleSyncDescription">Enable/disable data sync</string>
+    <string name="toggle2g3gDescription">Switch between 2G and 3G</string>
+    <string name="toggleSoundDescription">Switch between ring and vibrate only</string>
+    <string name="toggleBrightnessDescription">Switch between brightness levels</string>
+    <string name="toggleAutoRotateDescription">Enable/disable orientation sensor</string>
+    <string name="toggleScreenTimeoutDescription">Set diferent screen timeouts</string>
+    <string name="toggleAirplaneDescription">Enable/disable airplane mode</string>
+    <string name="toggleLockScreenDescription">Enable/disable lock screen</string>
+
+    
+    <string name="widgetSettings">Widget Instance Settings</string>
+    <string name="wifiSettings">Wifi Events settings</string>
+    <string name="dataSettings">Data Events settings</string>
+    <string name="powerSettings">Power Events settings</string>
+
+    <string name="generalSettings">General Settings</string>
+
+    <string name="autoDisable3G">Data disables 3G</string>
+    <string name="autoEnable3G">Data enables 3G</string>
+    <string name="autoDisable3GWithWifi">Wifi disables 3G</string>
+    <string name="autoEnable3GWithWifi">Wifi enables 3G</string>
+    <string name="useRoundCorners">Round corners</string>
+    <string name="useVertical">Vertical Layout</string>
+    <string name="useTransparent">Transparent Widget</string>
+    <string name="autoEnableSyncWithWifi">Wifi enables Sync</string>
+    <string name="autoDisableSyncWithWifi">Wifi disables Sync</string>
+    <string name="ringModeVibrateAsOn">Vibrate as ON</string>
+    <string name="monitorDataRoaming">Monitor Data Roaming</string>
+    <string name="autoEnableBluetoothWithPower">Ext. PWR enables Bluetooth</string>
+	<string name="autoDisableBluetoothWithPower">Ext. PWR disables Bluetooth</string>
+	<string name="autoEnableWifiWithPower">Ext. PWR enables Wifi</string>
+	<string name="autoDisableWifiWithPower">Ext. PWR disables Wifi</string>
+  
+    <string name="autoDisable3GDescription">2G when mobile data is disabled</string>
+    <string name="autoEnable3GDescription">3G when mobile data is enabled</string>
+    <string name="autoDisable3GWithWifiDescription">2G when Wifi is enabled</string>
+    <string name="autoEnable3GWithWifiDescription">3G when Wifi is disbled</string>
+    <string name="useRoundCornersDescription">Use round widget icons</string>
+    <string name="useTransparentDescription">No widget background</string>
+    <string name="useVerticalDescription">Show with vertical orientation</string>
+    <string name="autoEnableSyncWithWifiDescription">Enable sync when WIFI is enabled</string>
+    <string name="autoDisableSyncWithWifiDescription">Disable sync when WIFI is disabled</string>
+    <string name="ringModeVibrateAsOnDescription">Show Sound as on when vibrate only</string>
+    <string name="monitorDataRoamingDescription">Data status red if data roaming is enabled</string>
+    <string name="autoEnableBluetoothWithPowerDescription">Bluetooth enabled when Power connected</string>
+    <string name="autoDisableBluetoothWithPowerDescription">Bluetooth disabled when Power disconnected</string>
+    <string name="autoEnableWifiWithPowerDescription">Wifi enabled when Power connected</string>
+    <string name="autoDisableWifiWithPowerDescription">Wifi disabled when Power disconnected</string>
+
+    <string name="networkModeSpinner">Choose Network Modes</string>
+    <string name="brightnessSpinner">Choose Brightness levels</string>
+    <string name="ringModeSpinner">Choose Ring modes</string>
+    <string name="screenTimeoutSpinner">Choose Screen Timeout</string>
+    <string name="backgroundImageSpinner">Choose background</string>
+    
+	<!-- Expanded View Power Widget -->
+	<string name="use_notif_power_widget_title">Use notification power widget</string>
+    <string name="title_widget_buttons">Expanded View Widget</string>
+    <string name="title_expanded_widget">Notification power widget</string>
+    <string name="summary_expanded_widget">Use the expanded views power widget</string>
+    <string name="title_expanded_hide_onchange">Hide on change</string>
+    <string name="summary_expanded_hide_onchange">Hide the notification pulldown after toggling a widget button</string>
+    <string name="title_use_colored_ind">Colored indicator</string>
+    <string name="expanded_color_mask">Indicator color</string>
+    <string name="title_widget_picker">Notification widget settings</string>
+    <string name="summary_widget_picker">Pick your widget buttons</string>
+    <string name="title_toggle_wifi">Toggle Wifi</string>
+    <string name="title_toggle_bluetooth">Toggle Bluetooth</string>
+    <string name="title_toggle_gps">Toggle GPS</string>
+    <string name="title_toggle_sound">Toggle Sound</string>
+    <string name="title_toggle_brightness">Toggle Brightness</string>
+    <string name="title_toggle_sync">Toggle Sync</string>
+    <string name="title_toggle_wifiap">Toggle Wifi AP</string>
+    <string name="title_toggle_screentimeout">Toggle Screentimeout</string>
+    <string name="title_toggle_mobiledata">Toggle Mobiledata</string>
+    <string name="title_toggle_lockscreen">Toggle Lockscreen</string>
+    <string name="title_toggle_networkmode">Toggle 2G/3G</string>
+    <string name="title_toggle_autorotate">Toggle Orientation</string>
+    <string name="title_toggle_airplane">Toggle Airplane mode</string>
+    <string name="title_toggle_flashlight">Toggle Flashlight</string>
+    <string name="title_toggle_sleep">Go to sleep</string>
+    <string name="widget_max_buttons">6 is the max amount of buttons.</string>
+    
+    <string name="notConfigured">Not configured. Please add again</string>
+    
+    <string name="toggleFlashlightDescription">Enable/disable flashlight mode</string>
+    <string name="toggleFlashlight">Flashlight</string>
+
+    <string name="ok">Ok</string>
+
+    <!-- Widget Picker -->
+    <string name="widget_count">(%d widgets)</string>
+    
+    <!-- Trackpad and Menu key settings -->
+    <string name="trackpad_cat">Wake/Unlock settings</string>
+    <string name="menu_unlock_title">Menu unlock</string>
+    <string name="trackpad_wake_title">Trackpad wake</string>
+    <string name="trackpad_unlock_title">Trackpad unlock</string>
+    <string name="menu_unlock_summary">Unlock the device with Menu key</string>
+    <string name="trackpad_unlock_summary">Unlock the device with trackpad</string>
+    <string name="trackpad_wake_summary">Wake-up the device with trackpad</string>
+    
+    <!-- Backlight -->
+    <string name="backlight_title">Automatic backlight</string>
+    <string name="backlight_summary">Tweak levels and filtering</string>
+    <string name="light_filter_title">Light sensor filter</string>
+    <string name="light_filter_enabled_title">Enabled</string>
+    <string name="light_filter_enabled_summary">Apply moving average filter to sensor data to reduce flicker.</string>
+    <string name="light_filter_window_title">Window length</string>
+    <string name="light_filter_window_summary">Filtered value is the average sensor value during this period.</string>
+    <string name="light_filter_reset_title">Reset threshold</string>
+    <string name="light_filter_reset_summary">Samples deviating this much from current average resets the filter.</string>
+    <string name="light_filter_interval_title">Sample interval</string>
+    <string name="light_filter_interval_summary">Low value can improve accuracy but uses some more CPU.</string>
+    <string name="light_levels_title">Light levels</string>
+    <string name="light_levels_enabled_title">Use custom</string>
+    <string name="light_levels_dim_title">Screen dim level</string>
+    <string name="light_levels_dim_summary">Brightness used to dim the screen</string>
+    <string name="light_levels_editor_title">Edit other levels...</string>
+    <string name="light_decrease_enabled_title">Allow light decrease</string>
+    <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker.</string>
+    <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
+    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards.</string>
+
+    <!-- Light sensor levels -->
+    <string name="lights_settings_title">Light settings</string>
+    <string name="ll_title">Light sensor levels</string>
+    <string name="ll_header_upper">Upper</string>
+    <string name="ll_header_lower">Lower</string>
+    <string name="ll_header_lcd">Screen</string>
+    <string name="ll_header_btn">Buttons</string>
+    <string name="ll_header_kb">Keyboard</string>
+    <string name="ll_lux">Sensor (filtered / raw):</string>
+    <string name="ll_lcd">Screen:</string>
+    <string name="ll_btn">Buttons:</string>
+    <string name="ll_kb">Keyboard:</string>
+    <string name="ll_disabled">disabled</string>
+    <string name="ll_default">Load defaults</string>
+    <string name="ll_save">Save &amp; apply</string>
+    <string name="ll_reload">Reload current</string>
+    <string name="ll_bad_levels">Levels must be increasing</string>
+    <string name="ll_num_levels">Set number of levels</string>
+    
+    <string name="move_all_apps_to_sd_title">Move to SD</string>
+    <string name="move_all_apps_to_sd_summary">Allow moving all apps to SD</string>
+    
+
 </resources>
